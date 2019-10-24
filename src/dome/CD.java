@@ -1,26 +1,24 @@
 package dome;
 
-public class CD {
-    private String title;
+public class CD extends Item {
     private String artist;
     private int numOfTracks;
-    private int playingTime;
-    private boolean gotIt = false;
-    private String comment;
 
     public CD(String title, String artist, int numOfTracks, int playingTime, String comment) {
-        this.title = title;
+        super(title, playingTime, false, comment);
         this.artist = artist;
         this.numOfTracks = numOfTracks;
-        this.playingTime = playingTime;
-        this.comment = comment;
     }
 
     public static void main(String[] args) {
+        CD cd = new CD("right time", "jj lin", 5, 20, "excellent");
+        cd.print();
 
     }
 
     public void print() {
-        System.out.println("CD: "+title+" : "+artist);
+        System.out.print("CD: ");
+        super.print();
+        System.out.print(" : "+artist+"\n");
     }
 }

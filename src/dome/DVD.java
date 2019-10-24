@@ -1,17 +1,11 @@
 package dome;
 
-public class DVD {
-    private String title;
+public class DVD extends Item {
     private String director;
-    private int playingTime;
-    private boolean gotIt = false;
-    private String comment;
 
     public DVD(String title, String director, int playingTime, String comment) {
-        this.title = title;
+        super(title, playingTime, false, comment);
         this.director = director;
-        this.playingTime = playingTime;
-        this.comment = comment;
     }
 
     public static void main(String[] args) {
@@ -19,6 +13,8 @@ public class DVD {
     }
 
     public void print() {
-        System.out.println("DVD: "+title+" : "+director);
+        System.out.print("DVD: ");
+        super.print();
+        System.out.print(" : "+director+"\n");
     }
 }
