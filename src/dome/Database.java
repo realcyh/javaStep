@@ -40,6 +40,7 @@ public class Database {
         db.add(new CD("right time", "jj lin", 5, 20, "excellent"));
         db.add(new CD("as i believe", "jj lin", 3, 12, "excellent"));
         db.add(new DVD("friends", "chandler", 24, "great"));
+        db.add(new Item("try", 5, true, "..."));
         db.list();
     }
 }
