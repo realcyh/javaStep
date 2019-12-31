@@ -9,10 +9,6 @@ public class VendingMachine {
         total = 0;
     }
 
-    VendingMachine(int price) {
-
-    }
-
     void setPrice(int price) {
         this.price = price;
         getFood();
